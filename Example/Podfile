@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CompactCalendar_Example' do
+  pod 'CompactCalendar', :path => '../'
+
+  target 'CompactCalendar_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
