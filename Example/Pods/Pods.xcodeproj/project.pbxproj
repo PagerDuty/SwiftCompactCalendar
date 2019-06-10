@@ -17,7 +17,6 @@
 		2BD349CCE045362EF0B26436D33CE5C7 /* CompactCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C9E6E679B466F3AD963A9FBEBCEF90 /* CompactCalendar-dummy.m */; };
 		2C8E41D43E185E62965404EC1F236FA0 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E5179BCC19B8A4C9981ACE0E961B3942 /* FBSnapshotTestCase-dummy.m */; };
 		30EBD77620A3D4D82003AB00CA756D4E /* Pods-CompactCalendar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5006F76F2B1B70544FBB20D52768E761 /* Pods-CompactCalendar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		325E5EA0478581C713E40AC8B7CB6E93 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABA8473A5B1E6E413E0FDB3312B08A5 /* ReplaceMe.swift */; };
 		33CD52558D8E2F820100C8753AA2F32F /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BB97C946EF5DFF46CB40D7D685EE1 /* SwiftSupport.swift */; };
 		6F01DF0FB5610799A00AC976F981EB18 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 912F5BE09296F333F87046761D662D18 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		700E8CE0FDD79F21D428FC3D54D36C0E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B529483604801ABB9AB87D9F1FFAD9 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -34,6 +33,13 @@
 		D6B1B0AC7F376A0FC6DADEEAA737E508 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = C095B69FB8375794D8236558C70DAAE0 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DBADABF56FC0675DEE45B90CE6AFA4E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5E9FF730C28FC315DD1249D72A070C /* UIKit.framework */; };
 		E3B86D234BC43FB8877126BFDD760867 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B89C323C789A72335F3693734707F15 /* FBSnapshotTestCasePlatform.m */; };
+		E481641422AEEC78001DF480 /* CompactCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = E481640D22AEEC77001DF480 /* CompactCalendar.xib */; };
+		E481641522AEEC78001DF480 /* CompactCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */; };
+		E481641622AEEC78001DF480 /* CompactCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */; };
+		E481641722AEEC78001DF480 /* CompactCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481641022AEEC77001DF480 /* CompactCalendarLayout.swift */; };
+		E481641822AEEC78001DF480 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481641122AEEC77001DF480 /* DateHelpers.swift */; };
+		E481641922AEEC78001DF480 /* CompactCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481641222AEEC77001DF480 /* CompactCalendar.swift */; };
+		E481641A22AEEC78001DF480 /* CompactCalendarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481641322AEEC77001DF480 /* CompactCalendarDelegate.swift */; };
 		E7F0B09F899DBFE173736F8AE258ED48 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 2015821C6F52E13E032E0E4B9D53AFE7 /* UIImage+Diff.m */; };
 		EBF1284CE512D2359ECCF2C44470B566 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C97720D07754B8F519F93D7CA5AD48B /* Foundation.framework */; };
 		F6F7BB800B0DA194206E994521A80199 /* Pods-CompactCalendar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F760A12C8697F5D6E27480DBA73260A /* Pods-CompactCalendar_Tests-dummy.m */; };
@@ -66,14 +72,13 @@
 
 /* Begin PBXFileReference section */
 		010460E9C42CD663D4EC79D4B45289E2 /* Pods-CompactCalendar_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CompactCalendar_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		08E0BC0B81FDB597D3D14DF32C90518D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ABA8473A5B1E6E413E0FDB3312B08A5 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = CompactCalendar/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		08E0BC0B81FDB597D3D14DF32C90518D /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F760A12C8697F5D6E27480DBA73260A /* Pods-CompactCalendar_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CompactCalendar_Tests-dummy.m"; sourceTree = "<group>"; };
 		0FD35EE208D8D62C07596C6E757A4D0E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1835BEBFF7DF310B34726888F46DFFA4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1835BEBFF7DF310B34726888F46DFFA4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1B89C323C789A72335F3693734707F15 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		2015821C6F52E13E032E0E4B9D53AFE7 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		265DC60F5871575FF908A7C1AF91A133 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		290D40DB23B0E1E833EB7F996C615341 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		2B0390FC11C3671BEC209EA6F6AE8033 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
@@ -83,17 +88,17 @@
 		36BDC7BBAA053C4BED29DBAAABE27FA7 /* Pods-CompactCalendar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CompactCalendar_Example.modulemap"; sourceTree = "<group>"; };
 		3BBD2A36AD1DB714F29E2FFDBC581C16 /* Pods-CompactCalendar_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CompactCalendar_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		3C97720D07754B8F519F93D7CA5AD48B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3CA4EB5EF281C1D94707F7F86EF46283 /* CompactCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CompactCalendar.framework; path = CompactCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CA4EB5EF281C1D94707F7F86EF46283 /* CompactCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CompactCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E6541AA2134681758C84D0882AAD6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		469B1EEB3432D4E0A3638BD4977A0C46 /* Pods_CompactCalendar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CompactCalendar_Example.framework; path = "Pods-CompactCalendar_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		469B1EEB3432D4E0A3638BD4977A0C46 /* Pods_CompactCalendar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompactCalendar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CC95EB83BC1F5F1F33CB6B7EDF170C /* Pods-CompactCalendar_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CompactCalendar_Tests-resources.sh"; sourceTree = "<group>"; };
 		499BB97C946EF5DFF46CB40D7D685EE1 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		4FB23A7A321BFD09B0985E94534A5272 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		5006F76F2B1B70544FBB20D52768E761 /* Pods-CompactCalendar_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CompactCalendar_Tests-umbrella.h"; sourceTree = "<group>"; };
 		564430EAA78E7C0A953C98BF8AE26E4F /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		60E95877778C29A7CB43628EAA6B784F /* Pods-CompactCalendar_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CompactCalendar_Example-resources.sh"; sourceTree = "<group>"; };
-		67E056154FC4D0D639A7178A572BECDA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		707E05DB274412F33D6700FDFBE99E4D /* CompactCalendar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CompactCalendar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		67E056154FC4D0D639A7178A572BECDA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		707E05DB274412F33D6700FDFBE99E4D /* CompactCalendar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CompactCalendar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7E598EA85FAF39ACA9B89D6177D1A61A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		834395EBF5FF1C5D6A66A6C36E197436 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		841F562A950BC3B0D9DB87C857D478D7 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
@@ -113,10 +118,17 @@
 		C09486C3F07B8F78DA3A01C4DB419767 /* Pods-CompactCalendar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CompactCalendar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C095B69FB8375794D8236558C70DAAE0 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		CC5E9FF730C28FC315DD1249D72A070C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D149E782B4CA7AF323A1FC959E2A2647 /* Pods_CompactCalendar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CompactCalendar_Tests.framework; path = "Pods-CompactCalendar_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D149E782B4CA7AF323A1FC959E2A2647 /* Pods_CompactCalendar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompactCalendar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B529483604801ABB9AB87D9F1FFAD9 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		DB80A160A7D1641CA73E181480A39A25 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC80347042BE5398E9016813B2A55E6D /* Pods-CompactCalendar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CompactCalendar_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E481640D22AEEC77001DF480 /* CompactCalendar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompactCalendar.xib; sourceTree = "<group>"; };
+		E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendarModel.swift; sourceTree = "<group>"; };
+		E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendarCell.swift; sourceTree = "<group>"; };
+		E481641022AEEC77001DF480 /* CompactCalendarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendarLayout.swift; sourceTree = "<group>"; };
+		E481641122AEEC77001DF480 /* DateHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		E481641222AEEC77001DF480 /* CompactCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendar.swift; sourceTree = "<group>"; };
+		E481641322AEEC77001DF480 /* CompactCalendarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendarDelegate.swift; sourceTree = "<group>"; };
 		E5179BCC19B8A4C9981ACE0E961B3942 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		E6942863E4F9C7B25B068D635E73BFD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		EC7BD32E186136A13057107A37CC9D65 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
@@ -296,14 +308,19 @@
 				5DE15A8225BF6EF29D484EEF3F1137C2 /* Support Files */,
 				31214CF30AD1249E16ADFD0923DD4FD4 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
 		D72E3E627570C2E4568DA7873789507D /* CompactCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				0ABA8473A5B1E6E413E0FDB3312B08A5 /* ReplaceMe.swift */,
+				E481641222AEEC77001DF480 /* CompactCalendar.swift */,
+				E481640D22AEEC77001DF480 /* CompactCalendar.xib */,
+				E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */,
+				E481641322AEEC77001DF480 /* CompactCalendarDelegate.swift */,
+				E481641022AEEC77001DF480 /* CompactCalendarLayout.swift */,
+				E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */,
+				E481641122AEEC77001DF480 /* DateHelpers.swift */,
 				3A57027D9EB564859A47443925DE556F /* Pod */,
 				7FA7075C35AB36C9B5D3243DBD1E2707 /* Support Files */,
 			);
@@ -492,6 +509,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -512,6 +530,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E481641422AEEC78001DF480 /* CompactCalendar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +595,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD349CCE045362EF0B26436D33CE5C7 /* CompactCalendar-dummy.m in Sources */,
-				325E5EA0478581C713E40AC8B7CB6E93 /* ReplaceMe.swift in Sources */,
+				E481641722AEEC78001DF480 /* CompactCalendarLayout.swift in Sources */,
+				E481641622AEEC78001DF480 /* CompactCalendarCell.swift in Sources */,
+				E481641A22AEEC78001DF480 /* CompactCalendarDelegate.swift in Sources */,
+				E481641522AEEC78001DF480 /* CompactCalendarModel.swift in Sources */,
+				E481641822AEEC78001DF480 /* DateHelpers.swift in Sources */,
+				E481641922AEEC78001DF480 /* CompactCalendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,8 +911,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

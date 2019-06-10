@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompactCalendar" customModule="TWCalendar" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="S8Q-Iu-hYT" id="ygm-E2-ghI"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Ukw-nU-tGr"/>
+                <outlet property="daysOfWeekStackView" destination="HoH-Hh-UuD" id="5iN-CO-Ddo"/>
+                <outlet property="monthBar" destination="Nsl-mU-yet" id="PQh-Jo-MJg"/>
+                <outlet property="monthYearLabel" destination="Piu-45-WCS" id="u3o-tM-ovb"/>
+                <outlet property="nextPageButton" destination="s2x-HJ-4X6" id="pIw-b2-j7y"/>
+                <outlet property="previousPageButton" destination="8pG-op-kAH" id="0eb-Dx-obP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="center" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsl-mU-yet" userLabel="Month Bar">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Piu-45-WCS">
+                            <rect key="frame" x="132.5" y="7.5" width="110" height="20.5"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2x-HJ-4X6" userLabel="Forward Button">
+                            <rect key="frame" x="327" y="-4.5" width="44" height="44"/>
+                            <accessibility key="accessibilityConfiguration" label="forward 2 weeks"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="9hT-HL-fBl"/>
+                                <constraint firstAttribute="width" constant="44" id="RDM-zc-Uho"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="18" minY="15.5" maxX="18" maxY="15.5"/>
+                            <state key="normal" image="chevronRightGrey"/>
+                            <connections>
+                                <action selector="forwardButtonTapped:" destination="-1" eventType="touchUpInside" id="sSE-1L-MsY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pG-op-kAH" userLabel="Backward Button">
+                            <rect key="frame" x="0.0" y="-10" width="44" height="44"/>
+                            <accessibility key="accessibilityConfiguration" label="backward 2 weeks"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="VDQ-b8-7fR"/>
+                                <constraint firstAttribute="height" constant="44" id="ilQ-zB-TIN"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="18" minY="15.5" maxX="18" maxY="15.5"/>
+                            <state key="normal" image="chevronLeftGrey"/>
+                            <connections>
+                                <action selector="backwardButtonTapped" destination="-1" eventType="touchUpInside" id="VWJ-Jg-2sq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.021622974430000001" green="0.073561213910000006" blue="0.12342127410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="3a6-Bg-jKY"/>
+                        <constraint firstAttribute="trailing" secondItem="s2x-HJ-4X6" secondAttribute="trailing" constant="4" id="IKh-Xh-w1A"/>
+                        <constraint firstItem="8pG-op-kAH" firstAttribute="leading" secondItem="Nsl-mU-yet" secondAttribute="leading" constant="4" id="JZk-1Q-82K"/>
+                        <constraint firstItem="8pG-op-kAH" firstAttribute="centerY" secondItem="Nsl-mU-yet" secondAttribute="centerY" id="cz0-6z-CQj"/>
+                        <constraint firstItem="Piu-45-WCS" firstAttribute="centerY" secondItem="Nsl-mU-yet" secondAttribute="centerY" id="oDK-Tk-jm1"/>
+                        <constraint firstItem="s2x-HJ-4X6" firstAttribute="centerY" secondItem="Nsl-mU-yet" secondAttribute="centerY" id="seT-G9-PrN"/>
+                        <constraint firstItem="Piu-45-WCS" firstAttribute="centerX" secondItem="Nsl-mU-yet" secondAttribute="centerX" id="z5Z-sh-FYP"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S8Q-Iu-hYT">
+                    <rect key="frame" x="0.0" y="75" width="375" height="90"/>
+                    <color key="backgroundColor" red="0.021622974430000001" green="0.073561213910000006" blue="0.12342127410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="hTk-fm-fmV"/>
+                    </constraints>
+                    <collectionViewLayout key="collectionViewLayout" id="Z3e-Zl-Qch" customClass="CompactCalendarLayout" customModule="TWCalendar" customModuleProvider="target"/>
+                    <cells/>
+                </collectionView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HoH-Hh-UuD" userLabel="Days of Week">
+                    <rect key="frame" x="0.0" y="35" width="375" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4We-0B-dHq">
+                            <rect key="frame" x="0.0" y="0.0" width="53.5" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sai-OK-B7X">
+                            <rect key="frame" x="53.5" y="0.0" width="53.5" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-dx-Vj4">
+                            <rect key="frame" x="107" y="0.0" width="53.5" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GD3-RB-oxn">
+                            <rect key="frame" x="160.5" y="0.0" width="54" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMZ-X0-zdv">
+                            <rect key="frame" x="214.5" y="0.0" width="53.5" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-xi-nsf">
+                            <rect key="frame" x="268" y="0.0" width="53.5" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwp-6I-dSL">
+                            <rect key="frame" x="321.5" y="0.0" width="53.5" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                <bool key="isElement" value="NO"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="f96-zB-Ory"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.021622974430000001" green="0.073561213910000006" blue="0.12342127410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="S8Q-Iu-hYT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5SP-vk-FgP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HoH-Hh-UuD" secondAttribute="trailing" id="BAA-Ez-9Ug"/>
+                <constraint firstItem="HoH-Hh-UuD" firstAttribute="top" secondItem="Nsl-mU-yet" secondAttribute="bottom" id="BJv-vm-027"/>
+                <constraint firstItem="Nsl-mU-yet" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Jz6-ZZ-Tt5"/>
+                <constraint firstItem="Nsl-mU-yet" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Qjk-Aw-x13"/>
+                <constraint firstItem="HoH-Hh-UuD" firstAttribute="top" secondItem="Nsl-mU-yet" secondAttribute="bottom" id="Xfh-k2-BAb"/>
+                <constraint firstItem="Nsl-mU-yet" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="a6u-Dg-m2n"/>
+                <constraint firstItem="HoH-Hh-UuD" firstAttribute="bottom" secondItem="S8Q-Iu-hYT" secondAttribute="top" id="ol6-oO-q9Y"/>
+                <constraint firstItem="S8Q-Iu-hYT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xyt-R6-9Re"/>
+                <constraint firstItem="HoH-Hh-UuD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yHO-be-yNv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="53.600000000000001" y="-177.66116941529236"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevronLeftGrey" width="24" height="39"/>
+        <image name="chevronRightGrey" width="24" height="39"/>
+    </resources>
+</document>
