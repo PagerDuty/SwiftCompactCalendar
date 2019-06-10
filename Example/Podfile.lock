@@ -1,0 +1,27 @@
+PODS:
+  - CompactCalendar (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - CompactCalendar (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  CompactCalendar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CompactCalendar: e1c425ac9a540b91d4871441217afcb1fe532604
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: 02b8be8b62bde1070f20ba165dc31b9b2e886e13
+
+COCOAPODS: 1.5.3

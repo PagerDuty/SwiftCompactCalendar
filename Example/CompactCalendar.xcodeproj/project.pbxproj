@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		1CCB0DB986861FD7EA407EF5 /* Pods-CompactCalendar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompactCalendar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompactCalendar_Tests/Pods-CompactCalendar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2876C37E21CB405252FA6D28 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2F9BA4AE79BC3D926391D282 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		2876C37E21CB405252FA6D28 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2F9BA4AE79BC3D926391D282 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		40F4860732A056D1E168F2BC /* Pods_CompactCalendar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompactCalendar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBBF6A9C3F50A56A3919CCB /* Pods-CompactCalendar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompactCalendar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CompactCalendar_Example/Pods-CompactCalendar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5A69E885629790E7367BBBB0 /* Pods_CompactCalendar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CompactCalendar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +44,7 @@
 		607FACE51AFB9204008FA782 /* CompactCalendar_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompactCalendar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A6179F832570B19F3C557594 /* CompactCalendar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CompactCalendar.podspec; path = ../CompactCalendar.podspec; sourceTree = "<group>"; };
+		A6179F832570B19F3C557594 /* CompactCalendar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CompactCalendar.podspec; path = ../CompactCalendar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC48133AA71AAFF4CD41D793 /* Pods-CompactCalendar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompactCalendar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompactCalendar_Example/Pods-CompactCalendar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DEC159963519DA9B6FEDA670 /* Pods-CompactCalendar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompactCalendar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CompactCalendar_Tests/Pods-CompactCalendar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

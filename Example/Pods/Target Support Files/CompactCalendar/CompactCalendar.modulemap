@@ -1,0 +1,6 @@
+framework module CompactCalendar {
+  umbrella header "CompactCalendar-umbrella.h"
+
+  export *
+  module * { export * }
+}

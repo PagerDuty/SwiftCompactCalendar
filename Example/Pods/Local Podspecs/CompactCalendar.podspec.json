@@ -1,0 +1,22 @@
+{
+  "name": "CompactCalendar",
+  "version": "0.1.0",
+  "summary": "A short description of CompactCalendar.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/steve509/CompactCalendar",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "steve509": "stran@pagerduty.com"
+  },
+  "source": {
+    "git": "https://github.com/steve509/CompactCalendar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CompactCalendar/Classes/**/*"
+}
