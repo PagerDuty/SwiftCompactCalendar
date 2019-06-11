@@ -3,7 +3,6 @@ import CompactCalendar
 
 class ViewController: UIViewController {
 
-    private let systemRed = UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1)
     private let oneDay: Double = 86400
 
     @IBOutlet weak var compactCalendar: CompactCalendar!
@@ -52,7 +51,6 @@ class ViewController: UIViewController {
 
         // Custom everything
         compactCalendar.configure(selectedDate: customSelectedDate, today: customToday, daysOfTheWeekText: customDaysOfTheWeekText, calendar: customCalendar, timeZone: customTimeZone ?? TimeZone.current)
-         */
 
         // Customize Views
 
@@ -63,13 +61,13 @@ class ViewController: UIViewController {
         // The three lines above are the same as the line below this comment
         compactCalendar.setBackground(forConfigurableView: .all, to: .white)
 
-        compactCalendar.setBackground(forConfigurableView: .selectedDateView, to: systemRed)
+        compactCalendar.setBackground(forConfigurableView: .selectedDateView, to: .red)
 
         // Foreground Color
-        compactCalendar.setForeground(forConfigurableView: .monthBar, to: .black)
-        compactCalendar.setForeground(forConfigurableView: .monthBarButtons, to: systemRed)
-        compactCalendar.setForeground(forConfigurableView: .daysOfTheWeekBar, to: systemRed)
-        compactCalendar.setForeground(forConfigurableView: .datesView, to: .black)
+        compactCalendar.setForeground(forConfigurableView: .monthBar, to: .purple)
+        compactCalendar.setForeground(forConfigurableView: .monthBarButtons, to: .red)
+        compactCalendar.setForeground(forConfigurableView: .daysOfTheWeekBar, to: .red)
+        compactCalendar.setForeground(forConfigurableView: .datesView, to: .purple)
         compactCalendar.setForeground(forConfigurableView: .selectedDateView, to: .white)
 
         // Font
@@ -77,6 +75,7 @@ class ViewController: UIViewController {
         compactCalendar.setFont(forConfigurableView: .daysOfTheWeekBar, to: .systemFont(ofSize: 13))
         compactCalendar.setFont(forConfigurableView: .datesView, to: .systemFont(ofSize: 16))
 
+        */
     }
 
     @IBAction func todayButtonPressed(_ sender: Any) {

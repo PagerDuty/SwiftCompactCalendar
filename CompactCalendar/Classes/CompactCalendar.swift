@@ -91,15 +91,13 @@ public class CompactCalendar: UIView {
     override init(frame: CGRect) {
         self.model = CompactCalendarModel(today: Date(), initiallySelectedDate: Date(), calendar: Calendar.current, timeZone: TimeZone.current)
         super.init(frame: frame)
-        setUpNib()
-        configure()
+        setUp()
     }
 
     required init?(coder aDecoder: NSCoder) {
         self.model = CompactCalendarModel(today: Date(), initiallySelectedDate: Date(), calendar: Calendar.current, timeZone: TimeZone.current)
         super.init(coder: aDecoder)
-        setUpNib()
-        configure()
+        setUp()
     }
 
     // MARK: - Overridden Methods
@@ -121,12 +119,41 @@ public class CompactCalendar: UIView {
         setupCollectionView()
     }
 
+    private func setUp() {
+        setUpNib()
+        setUpDefaultStyle()
+        configure()
+    }
+
     private func setUpNib() {
         let bundle = Bundle(for: CompactCalendar.self)
         bundle.loadNibNamed("CompactCalendar", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+
+    private func setUpDefaultStyle() {
+        // Background Color
+        setBackground(forConfigurableView: .monthBar, to: .white)
+        setBackground(forConfigurableView: .daysOfTheWeekBar, to: .white)
+        setBackground(forConfigurableView: .datesView, to: .white)
+        // The three lines above are the same as the line below this comment
+        setBackground(forConfigurableView: .all, to: .white)
+
+        setBackground(forConfigurableView: .selectedDateView, to: UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1))
+
+        // Foreground Color
+        setForeground(forConfigurableView: .monthBar, to: .black)
+        setForeground(forConfigurableView: .monthBarButtons, to: UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1))
+        setForeground(forConfigurableView: .daysOfTheWeekBar, to: UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1))
+        setForeground(forConfigurableView: .datesView, to: .black)
+        setForeground(forConfigurableView: .selectedDateView, to: .white)
+
+        // Font
+        setFont(forConfigurableView: .monthBar, to: .systemFont(ofSize: 17))
+        setFont(forConfigurableView: .daysOfTheWeekBar, to: .systemFont(ofSize: 13))
+        setFont(forConfigurableView: .datesView, to: .systemFont(ofSize: 16))
     }
 
     // MARK: - Public Methods
