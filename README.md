@@ -2,7 +2,7 @@
 
 Compact Calendar is a CocoaPod developed in Swift with a customizable View that displays a Calendar two weeks at a time. This view was originally developed in the PagerDuty Mobile App as a way to enhance the on-call scheduling experience, now we are giving it to the people!
 
-![Compact Calendar](readme-images/snapshot.png)
+![Compact Calendar](https://user-images.githubusercontent.com/6761111/59296324-ac283080-8c53-11e9-820c-848eb3a9549b.png)
 
 ### Installation
 
@@ -20,19 +20,19 @@ pod 'CompactCalendar'
 
 1. Add a view to the desired View Controller to in your storyboard
 
-![Step 1](readme-images/step1.png)
+![Step 1](https://user-images.githubusercontent.com/6761111/59296457-088b5000-8c54-11e9-825f-46bf642c39e1.png)
 
 2. Place the view where you want it inside the View Controller, add desired constraints and constrain the height to 165. This is to ensure everything fits in the Calendar as expected.
 
-![Step 2](readme-images/step2.png)
+![Step 2](https://user-images.githubusercontent.com/6761111/59296469-0fb25e00-8c54-11e9-8c65-666261dca501.png)
 
 3. Change the view's class in the storyboard from _UIView_ to _CompactCalendar_ under Custom Class
 
-![Step 3](readme-images/step3.png)
+![Step 3](https://user-images.githubusercontent.com/6761111/59296483-18a32f80-8c54-11e9-8834-3571de8141d1.png)
 
 4. Add the Compact Calendar as an _IBOutlet_ in your View Controller's class
 
-![Step 4](readme-images/step4.png)
+![Step 4](https://user-images.githubusercontent.com/6761111/59296498-1fca3d80-8c54-11e9-9eba-8db58e9dc3db.png)
 
 
 #### _In your View Controller's Swift file_
@@ -48,31 +48,28 @@ import CompactCalendar
 
 ```Swift
 class MyViewController: UIViewController, CompactCalendarDelegate {
-@IBOutlet weak var compactCalendar: CompactCalendar!
+  @IBOutlet weak var compactCalendar: CompactCalendar!
 
-func compactCalendar(_ compactCalendar: CompactCalendar, didSelectCalendarCellWith date: Date, isAlreadySelected: Bool) {
+  func compactCalendar(_ compactCalendar: CompactCalendar, didSelectCalendarCellWith date: Date, isAlreadySelected: Bool) {
 
-}
+  }
 
-func didGoToNextPage(_ compactCalendar: CompactCalendar, weeksAhead: Int) {
+  func didGoToNextPage(_ compactCalendar: CompactCalendar, weeksAhead: Int) {
 
-}
+  }
 
-func didGoToPreviousPage(_ compactCalendar: CompactCalendar, weeksAhead: Int) {
+  func didGoToPreviousPage(_ compactCalendar: CompactCalendar, weeksAhead: Int) {
 
-}
+  }
 }
 ```
 
-7. Set the Compact Calendar's delegate to _MyViewController_, and invoke `configure` in the `viewDidLoad` method
+7. Set the Compact Calendar's delegate to _MyViewController_ in the `viewDidLoad` method
 
 ```Swift
 override func viewDidLoad() {
-super.viewDidLoad()
-
-compactCalendar.delegate = self
-compactCalendar.configure()
-
+  super.viewDidLoad()
+  compactCalendar.delegate = self
 }
 ```
 
@@ -123,7 +120,7 @@ You can customize various components of the view by changing their background co
 
 Here are all the names of the configurable views and what they refer to 
 
-![Configurable Views](readme-images/configurable-views.png)
+![Configurable Views](https://user-images.githubusercontent.com/6761111/59296541-37a1c180-8c54-11e9-9575-d95a53934072.png)
 
 Here's how the methods are used to customize the view:
 
