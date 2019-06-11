@@ -122,7 +122,8 @@ public class CompactCalendar: UIView {
     }
 
     private func setUpNib() {
-        Bundle.main.loadNibNamed("CompactCalendar", owner: self, options: nil)
+        let bundle = Bundle(for: CompactCalendar.self)
+        bundle.loadNibNamed("CompactCalendar", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
