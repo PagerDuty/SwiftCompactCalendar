@@ -479,7 +479,8 @@ public class CompactCalendar: UIView {
     // MARK: - Month Label
 
     private func tintedImage(named name: String) -> UIImage {
-        return UIImage(named: name)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate) ?? UIImage()
+        let bundle = Bundle(for: CompactCalendar.self)
+        return UIImage(named: name, in: bundle, compatibleWith: nil)?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate) ?? UIImage()
     }
 
     private func monthLabelWithoutYear(_ monthLabel: String) -> String {
