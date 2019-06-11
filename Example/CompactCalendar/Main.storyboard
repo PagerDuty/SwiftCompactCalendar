@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vLl-Yk-vd1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Compact Calendar Demo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CompactCalendar_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCg-4O-xx0" customClass="CompactCalendar" customModule="CompactCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="PES-zU-JL6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="February 11, 2009" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdI-sg-jM7">
+                                <rect key="frame" x="0.0" y="229" width="375" height="388"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-zp-6Ed">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CSH-Oz-kRJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <state key="normal" title="Today"/>
+                                <connections>
+                                    <action selector="todayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e8Y-ro-01X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tJD-zp-6Ed" firstAttribute="top" secondItem="ZdI-sg-jM7" secondAttribute="bottom" id="45v-v2-yqR"/>
+                            <constraint firstItem="bCg-4O-xx0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8N7-YV-UzK"/>
+                            <constraint firstItem="ZdI-sg-jM7" firstAttribute="top" secondItem="bCg-4O-xx0" secondAttribute="bottom" id="eL5-1a-v1a"/>
+                            <constraint firstItem="bCg-4O-xx0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eMe-jw-fNZ"/>
+                            <constraint firstItem="bCg-4O-xx0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i9Q-1f-gc3"/>
+                            <constraint firstItem="ZdI-sg-jM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jfi-QF-vxv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tJD-zp-6Ed" secondAttribute="bottom" constant="20" id="o5H-uG-gJF"/>
+                            <constraint firstItem="tJD-zp-6Ed" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pOy-x3-brH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZdI-sg-jM7" secondAttribute="trailing" id="qZF-xf-daH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Compact Calendar Demo" id="tL5-Li-PMy"/>
+                    <connections>
+                        <outlet property="compactCalendar" destination="bCg-4O-xx0" id="88X-Cd-RnS"/>
+                        <outlet property="dateLabel" destination="ZdI-sg-jM7" id="Ve6-MN-6ZK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="1"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8F8-XI-HQi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vLl-Yk-vd1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aaB-F3-esp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CIc-f2-RHB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XD-kq-eQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-535" y="-90"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,22 +1,24 @@
 {
   "name": "CompactCalendar",
   "version": "0.1.0",
-  "summary": "A short description of CompactCalendar.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/steve509/CompactCalendar",
+  "summary": "A view that displays a calendar two weeks at a time",
+  "description": "This CocoaPod provides the ability to use a calendar view",
+  "homepage": "https://github.com/PagerDuty/PDCompactCalendar",
   "license": {
-    "type": "MIT",
+    "type": "Apache License 2.0",
     "file": "LICENSE"
   },
   "authors": {
     "steve509": "stran@pagerduty.com"
   },
   "source": {
-    "git": "https://github.com/steve509/CompactCalendar.git",
+    "git": "https://github.com/PagerDuty/PDCompactCalendar.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "CompactCalendar/Classes/**/*"
+  "source_files": "CompactCalendar/Classes/**/*",
+  "swift_versions": "4.2",
+  "swift_version": "4.2"
 }
