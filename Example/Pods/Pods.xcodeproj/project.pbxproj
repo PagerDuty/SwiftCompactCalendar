@@ -33,6 +33,7 @@
 		D6B1B0AC7F376A0FC6DADEEAA737E508 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = C095B69FB8375794D8236558C70DAAE0 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DBADABF56FC0675DEE45B90CE6AFA4E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5E9FF730C28FC315DD1249D72A070C /* UIKit.framework */; };
 		E3B86D234BC43FB8877126BFDD760867 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B89C323C789A72335F3693734707F15 /* FBSnapshotTestCasePlatform.m */; };
+		E41B350822AFF04300EC5762 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = E41B350722AFF04300EC5762 /* .gitkeep */; };
 		E481641422AEEC78001DF480 /* CompactCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = E481640D22AEEC77001DF480 /* CompactCalendar.xib */; };
 		E481641522AEEC78001DF480 /* CompactCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */; };
 		E481641622AEEC78001DF480 /* CompactCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */; };
@@ -122,6 +123,7 @@
 		D7B529483604801ABB9AB87D9F1FFAD9 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		DB80A160A7D1641CA73E181480A39A25 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC80347042BE5398E9016813B2A55E6D /* Pods-CompactCalendar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CompactCalendar_Example-frameworks.sh"; sourceTree = "<group>"; };
+		E41B350722AFF04300EC5762 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E481640D22AEEC77001DF480 /* CompactCalendar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompactCalendar.xib; sourceTree = "<group>"; };
 		E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendarModel.swift; sourceTree = "<group>"; };
 		E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactCalendarCell.swift; sourceTree = "<group>"; };
@@ -314,13 +316,7 @@
 		D72E3E627570C2E4568DA7873789507D /* CompactCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				E481641222AEEC77001DF480 /* CompactCalendar.swift */,
-				E481640D22AEEC77001DF480 /* CompactCalendar.xib */,
-				E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */,
-				E481641322AEEC77001DF480 /* CompactCalendarDelegate.swift */,
-				E481641022AEEC77001DF480 /* CompactCalendarLayout.swift */,
-				E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */,
-				E481641122AEEC77001DF480 /* DateHelpers.swift */,
+				E41B350622AFF04300EC5762 /* Classes */,
 				3A57027D9EB564859A47443925DE556F /* Pod */,
 				7FA7075C35AB36C9B5D3243DBD1E2707 /* Support Files */,
 			);
@@ -347,6 +343,22 @@
 				FE05DAD5186CEC183AAD0BC4D2F6297C /* UIImage+Snapshot.m */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		E41B350622AFF04300EC5762 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E481641222AEEC77001DF480 /* CompactCalendar.swift */,
+				E481640D22AEEC77001DF480 /* CompactCalendar.xib */,
+				E481640F22AEEC77001DF480 /* CompactCalendarCell.swift */,
+				E481641322AEEC77001DF480 /* CompactCalendarDelegate.swift */,
+				E481641022AEEC77001DF480 /* CompactCalendarLayout.swift */,
+				E481640E22AEEC77001DF480 /* CompactCalendarModel.swift */,
+				E481641122AEEC77001DF480 /* DateHelpers.swift */,
+				E41B350722AFF04300EC5762 /* .gitkeep */,
+			);
+			name = Classes;
+			path = CompactCalendar/Classes;
 			sourceTree = "<group>";
 		};
 		E81A37DBDE41E671312C56736544E2FA /* Pods */ = {
@@ -531,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E481641422AEEC78001DF480 /* CompactCalendar.xib in Resources */,
+				E41B350822AFF04300EC5762 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +657,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CompactCalendar_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CompactCalendar_Example/Pods-CompactCalendar_Example.modulemap";
@@ -677,7 +690,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CompactCalendar_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CompactCalendar_Tests/Pods-CompactCalendar_Tests.modulemap";
@@ -711,7 +724,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -742,7 +755,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CompactCalendar/CompactCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CompactCalendar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CompactCalendar/CompactCalendar.modulemap";
 				PRODUCT_MODULE_NAME = CompactCalendar;
@@ -810,7 +823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -839,7 +852,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CompactCalendar_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CompactCalendar_Tests/Pods-CompactCalendar_Tests.modulemap";
@@ -906,7 +919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -933,7 +946,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-CompactCalendar_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CompactCalendar_Example/Pods-CompactCalendar_Example.modulemap";
@@ -967,7 +980,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -999,7 +1012,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/CompactCalendar/CompactCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/CompactCalendar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CompactCalendar/CompactCalendar.modulemap";
 				PRODUCT_MODULE_NAME = CompactCalendar;

@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
   s.author           = { 'steve509' => 'stran@pagerduty.com' }
   s.source           = { :git => 'https://github.com/PagerDuty/PDCompactCalendar.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
   s.source_files = 'CompactCalendar/Classes/**/*'
   s.swift_versions   = '4.2'
 end
