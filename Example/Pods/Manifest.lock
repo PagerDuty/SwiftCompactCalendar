@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CompactCalendar: 875cf4e44d1fbff1ba0e21c0e229ac97e16b30f9
+  CompactCalendar: 9f03611d6d7908f2547ad858f8b5e10dc8be9861
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: 02b8be8b62bde1070f20ba165dc31b9b2e886e13

@@ -18,6 +18,7 @@
   "platforms": {
     "ios": "11.0"
   },
+  "resources": "CompactCalendar/Assets/**/*",
   "source_files": "CompactCalendar/Classes/**/*",
   "swift_versions": "4.2",
   "swift_version": "4.2"
