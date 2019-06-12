@@ -69,11 +69,11 @@ final class CompactCalendarCell: UICollectionViewCell {
             highlightedView.layer.borderColor = UIColor.clear.cgColor
             highlightedView.backgroundColor = .clear
         case .inThePast:
-            dayLabel.textColor = textColor.withAlphaComponent(0.8)
+            dayLabel.textColor = textColor.withAlphaComponent(0.5)
             highlightedView.layer.borderColor = UIColor.clear.cgColor
             highlightedView.backgroundColor = .clear
         case .today:
-            dayLabel.textColor = textColor
+            dayLabel.textColor = selectedColor
             highlightedView.layer.borderColor = selectedColor.cgColor
             highlightedView.backgroundColor = .clear
         case .selected:
