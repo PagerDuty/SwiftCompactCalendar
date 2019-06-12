@@ -171,7 +171,7 @@ public class CompactCalendar: UIView {
      - Precondition: `textForLabels` and `daysOfWeekStackView.arrangedSubviews` are of equal length
 
     */
-    public func configure(selectedDate: Date = Date(), today: Date = Date(), daysOfTheWeekText: [String] = CompactCalendar.defaultDaysOfWeekText, calendar: Calendar = Calendar.current, timeZone: TimeZone = TimeZone.current) {
+    public func configure(selectedDate: Date = Date(), today: Date = Date(), calendar: Calendar = Calendar.current, timeZone: TimeZone = TimeZone.current) {
         self.model = CompactCalendarModel(today: today, initiallySelectedDate: selectedDate, calendar: calendar, timeZone: timeZone)
         self.model.loadDates()
         // these two lines are necessary to get the collection view to size its content view
@@ -182,16 +182,12 @@ public class CompactCalendar: UIView {
         }
         collectionView.collectionViewLayout.invalidateLayout()
 
-        if model.weekStartsOnMonday() {
-            shuffleWeekdayHeaders()
-        }
-
         let initialDateCount = model.pastDays + model.previousDays
         selectedIndexPath = IndexPath(row: initialDateCount, section: 0)
 
         updateMonthLabel(for: model.initiallySelectedDate)
 
-        setDaysOfWeekLabels(withValues: daysOfTheWeekText)
+        setDaysOfWeekLabels(calendar: calendar)
 
         delegate?.compactCalendar(self, didSelectCalendarCellWith: selectedDate, isAlreadySelected: false)
     }
@@ -317,8 +313,9 @@ public class CompactCalendar: UIView {
     /// This moves the calendar collection view forward by a page.
     /// In order to use this, you need to follow it up with `func adjustContentOffset(forGoingToPreviousPage:)`
     private func nextPage() {
-        guard !isScrolling, let firstVisibleIndex = collectionView.indexPathsForVisibleItems.min()?.row else { return }
-
+        guard !isScrolling, let firstVisibleIndex = collectionView.indexPathsForVisibleItems.min()?.row else {
+            return
+        }
         if let (startIndex, endIndex) = model.generateFutureDates(from: firstVisibleIndex) {
             let indexPaths = (startIndex ... endIndex).map {
                 IndexPath(row: $0, section: 0)
@@ -384,9 +381,9 @@ public class CompactCalendar: UIView {
     }
 
     private func select(dateAtIndexPath indexPath: IndexPath) {
-        guard let selectedCell = collectionView.cellForItem(at: indexPath) as? CompactCalendarCell,
-            let selectedDate = selectedCell.date
-            else { return }
+        guard let selectedCell = collectionView.cellForItem(at: indexPath) as? CompactCalendarCell, let selectedDate = selectedCell.date else {
+            return
+        }
 
         var isAlreadySelected = false
 
@@ -415,7 +412,9 @@ public class CompactCalendar: UIView {
     /// I separated this part out because it caused an animation glitch if I didn't separate this
     /// in the scrollViewWillEndDragging from the other methods in scrollViewWillBeginDragging
     private func adjustContentOffset(didGoToPreviousPage: Bool, didSwipeView: Bool) {
-        guard !isScrolling else { return }
+        guard !isScrolling else {
+            return
+        }
         let contentOffset = collectionView.contentOffset
         let contentOffsetX = didGoToPreviousPage ? contentOffset.x - collectionViewContentWidth : contentOffset.x + collectionViewContentWidth
         isScrolling = true
@@ -428,9 +427,9 @@ public class CompactCalendar: UIView {
         let firstIndex = IndexPath(row: currentIndex, section: 0)
         let lastIndex = IndexPath(row: currentIndex + 13, section: 0)
 
-        guard let firstDate = self.date(forIndexPath: firstIndex),
-            let lastDate = self.date(forIndexPath: lastIndex)
-            else { return }
+        guard let firstDate = self.date(forIndexPath: firstIndex), let lastDate = self.date(forIndexPath: lastIndex) else {
+            return
+        }
 
         setMonthLabel(firstDate: firstDate, lastDate: lastDate)
     }
@@ -458,22 +457,15 @@ public class CompactCalendar: UIView {
 
     // MARK: - Days of Week Stack View
 
-    private func setDaysOfWeekLabels(withValues textForLabels: [String]) {
-        guard textForLabels.count == daysOfWeekStackView.arrangedSubviews.count else {
+    private func setDaysOfWeekLabels(calendar: Calendar) {
+        guard daysOfWeekStackView.arrangedSubviews.count == 7 else {
             return
         }
-        Array(zip(daysOfWeekStackView.arrangedSubviews, textForLabels)).forEach {
-            if let label = $0 as? UILabel {
-                label.text = $1
+        for (i, subview) in daysOfWeekStackView.arrangedSubviews.enumerated() {
+            if let label = subview as? UILabel, let symbol = calendar.weekdaySymbols[(i + calendar.firstWeekday - 1) % 7].first {
+                label.text = String(symbol)
             }
         }
-    }
-
-    private func shuffleWeekdayHeaders() {
-        // pop out Sunday and move it to the end. :)
-        guard let sundayLabel = daysOfWeekStackView.arrangedSubviews.first else { return }
-        sundayLabel.removeFromSuperview()
-        daysOfWeekStackView.addArrangedSubview(sundayLabel)
     }
 
     // MARK: - Month Label
@@ -495,10 +487,11 @@ public class CompactCalendar: UIView {
         }
 
         guard let firstIndex = collectionView.indexPathsForVisibleItems.min(),
-            let lastIndex = collectionView.indexPathsForVisibleItems.max(),
-            let firstDate = self.date(forIndexPath: firstIndex),
-            let lastDate = self.date(forIndexPath: lastIndex)
-            else { return }
+                let lastIndex = collectionView.indexPathsForVisibleItems.max(),
+                let firstDate = self.date(forIndexPath: firstIndex),
+                let lastDate = self.date(forIndexPath: lastIndex) else {
+            return
+        }
 
         setMonthLabel(firstDate: firstDate, lastDate: lastDate)
     }
