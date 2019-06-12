@@ -4,10 +4,10 @@ Pod::Spec.new do |s|
   s.summary               = 'A view that displays a calendar two weeks at a time'
   s.description           = 'This CocoaPod provides the ability to use a calendar view'
 
-  s.homepage              = 'https://github.com/PagerDuty/PDCompactCalendar'
+  s.homepage              = 'https://github.com/PagerDuty/SwiftCompactCalendar'
   s.license               = { :type => 'Apache License 2.0', :file => 'LICENSE' }
   s.author                = { 'steve509' => 'stran@pagerduty.com' }
-  s.source                = { :git => 'https://github.com/PagerDuty/PDCompactCalendar.git', :tag => s.version.to_s }
+  s.source                = { :git => 'https://github.com/PagerDuty/SwiftCompactCalendar.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
   s.resources             = 'CompactCalendar/Assets/**/*'
   s.source_files          = 'CompactCalendar/Classes/**/*'
