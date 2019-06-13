@@ -1,6 +1,6 @@
 ## Compact Calendar
 
-Compact Calendar is a CocoaPod developed in Swift with a customizable View that displays a Calendar two weeks at a time. This view was originally developed in the PagerDuty Mobile App as a way to enhance the on-call scheduling experience, now we are giving it to the people!
+Compact Calendar is a CocoaPod developed in Swift with a customizable View that displays a Calendar two weeks at a time. 
 
 ![Compact Calendar](https://user-images.githubusercontent.com/6761111/59296324-ac283080-8c53-11e9-820c-848eb3a9549b.png)
 
