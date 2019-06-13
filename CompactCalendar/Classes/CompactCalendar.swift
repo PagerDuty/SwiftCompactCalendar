@@ -41,8 +41,6 @@ public class CompactCalendar: UIView {
     private var isScrolling = false
     private var selectedIndexPath: IndexPath?
     private var loadToday = false
-    private var scrollOnAppear = true
-    private var fetchOnAppear = true
     private var model: CompactCalendarModel
 
     private var selectedDateBackgroundColor: UIColor? {
@@ -188,8 +186,6 @@ public class CompactCalendar: UIView {
         updateMonthLabel(for: model.initiallySelectedDate)
 
         setDaysOfWeekLabels(calendar: calendar)
-
-        delegate?.compactCalendar(self, didSelectCalendarCellWith: selectedDate, isAlreadySelected: false)
     }
 
     /**
@@ -364,14 +360,10 @@ public class CompactCalendar: UIView {
         guard let indexPath = selectedIndexPath else {
             return
         }
-        if scrollOnAppear {
-            scrollToSegment(indexPath)
-        }
-        if fetchOnAppear {
-            select(dateAtIndexPath: indexPath)
-            if let selectedDate = date(forIndexPath: indexPath) {
-                updateMonthLabel(for: selectedDate)
-            }
+        scrollToSegment(indexPath)
+        select(dateAtIndexPath: indexPath)
+        if let selectedDate = date(forIndexPath: indexPath) {
+            updateMonthLabel(for: selectedDate)
         }
     }
 
@@ -380,7 +372,7 @@ public class CompactCalendar: UIView {
         select(dateAtIndexPath: IndexPath(row: model.pastDays, section: 0))
     }
 
-    private func select(dateAtIndexPath indexPath: IndexPath) {
+    public func select(dateAtIndexPath indexPath: IndexPath) {
         guard let selectedCell = collectionView.cellForItem(at: indexPath) as? CompactCalendarCell, let selectedDate = selectedCell.date else {
             return
         }
