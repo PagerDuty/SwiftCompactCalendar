@@ -114,11 +114,11 @@ compactCalendar.configure(selectedDate: customSelectedDate, today: customToday, 
 
 #### Customizing the view
 
-You can customize various components of the view by changing their background color, foreground color or font. We've provided three methods `setBackgroundColor`, `setForegroundColor` and `setFont` which take CompactCalendar's _ConfigurableView_ and _UIColor_ or _UIFont_ as arguments and sets the property of the specified configurable view. 
+You can customize various components of the view by changing their background color, foreground color or font. We've provided three methods `setBackgroundColor`, `setForegroundColor` and `setFont` which take CompactCalendar's _ConfigurableView_ and _UIColor_ or _UIFont_ as arguments and sets the property of the specified configurable view.
 
 ##### Configurable Views:
 
-Here are all the names of the configurable views and what they refer to 
+Here are all the names of the configurable views and what they refer to
 
 ![Configurable Views](https://user-images.githubusercontent.com/6761111/59296541-37a1c180-8c54-11e9-9575-d95a53934072.png)
 
@@ -164,7 +164,7 @@ The remaining methods:
 ```Swift
 func didGoToNextPage(_ compactCalendar: CompactCalendar, weeksAhead: Int)
 
-func didGoToPreviousPage(_ compactCalendar: CompactCalendar, weeksAhead: Int) 
+func didGoToPreviousPage(_ compactCalendar: CompactCalendar, weeksAhead: Int)
 ```
 
 When either the button to go to the next page of dates is pressed OR the calendar is swiped, `didGoToNextPage` is called by `compactCalendar` view. The `weeksAhead` parameter is an integer value that represents the number of weeks that the new page is ahead of the previous page. An important thing to note is that this may not always be two weeks since the user may scroll multiple pages before the method is called.

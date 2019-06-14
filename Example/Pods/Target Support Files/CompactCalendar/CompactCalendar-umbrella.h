@@ -13,4 +13,3 @@
 
 FOUNDATION_EXPORT double CompactCalendarVersionNumber;
 FOUNDATION_EXPORT const unsigned char CompactCalendarVersionString[];
-
