@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 
   s.homepage              = 'https://github.com/PagerDuty/SwiftCompactCalendar'
   s.license               = { :type => 'Apache License 2.0', :file => 'LICENSE' }
-  s.author                = { 'steve509' => 'stran@pagerduty.com' }
+  s.author                = 'PagerDuty'
   s.source                = { :git => 'https://github.com/PagerDuty/SwiftCompactCalendar.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
   s.resources             = 'CompactCalendar/Assets/**/*'
