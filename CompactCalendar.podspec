@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'CompactCalendar'
-  s.version               = '0.1.4'
+  s.version               = '0.1.5'
   s.summary               = 'A view that displays a calendar two weeks at a time'
   s.description           = 'This CocoaPod provides the ability to use a calendar view'
 
