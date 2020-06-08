@@ -28,7 +28,10 @@ final class CompactCalendarModel: NSObject {
         /// The number of extra pages to generate in case the initial selected day is in the next 2-week chunk
         let extraPages = Int(extraDays) / 14
         let daysToPopulate = (extraPages + 2) * 14 // the number in (extraPages + 2) is how many pages you want generated at start
-        let weekday = Calendar.current.component(.weekday, from: today)
+        var weekday = Calendar.current.component(.weekday, from: today)
+        if weekday == 1 && weekStartsOnMonday() {
+            weekday = 8
+        }
 
         let firstWeekday = weekStartsOnMonday() ? 1 : 0
 
