@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'CompactCalendar'
-  s.version               = '0.1.6'
+  s.version               = '0.1.7'
   s.summary               = 'A view that displays a calendar two weeks at a time'
   s.description           = 'This CocoaPod provides the ability to use a calendar view'
 
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.resources             = 'CompactCalendar/Assets/**/*'
   s.source_files          = 'CompactCalendar/Classes/**/*'
-  s.swift_versions        = '4.2'
+  s.swift_versions        = '5.0'
 end
