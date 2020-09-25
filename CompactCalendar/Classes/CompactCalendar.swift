@@ -223,15 +223,20 @@ public class CompactCalendar: UIView {
         switch view {
         case .monthBar:
             monthBar.backgroundColor = color
+
         case .monthBarButtons:
             nextPageButton.backgroundColor = color
             previousPageButton.backgroundColor = color
+
         case .daysOfTheWeekBar:
             contentView.backgroundColor = color
+
         case .datesView:
             collectionView.backgroundColor = color
+
         case .selectedDateView:
             selectedDateBackgroundColor = color
+
         case .all:
             monthBar.backgroundColor = color
             collectionView.backgroundColor = color
@@ -253,20 +258,25 @@ public class CompactCalendar: UIView {
         switch view {
         case .monthBar:
             monthYearLabel.textColor = color
+
         case .monthBarButtons:
             nextPageButton.tintColor = color
             previousPageButton.tintColor = color
+
         case .daysOfTheWeekBar:
             daysOfWeekStackView.arrangedSubviews.forEach {
                 guard let label = $0 as? UILabel else {
                     return
                 }
                 label.textColor = color
+
             }
         case .datesView:
             datesViewForegroundColor = color
+
         case .selectedDateView:
             selectedDateForegroundColor = color
+
         default:
             return
         }
@@ -285,6 +295,7 @@ public class CompactCalendar: UIView {
         switch view {
         case .monthBar:
             monthYearLabel.font = font
+
         case .daysOfTheWeekBar:
             daysOfWeekStackView.arrangedSubviews.forEach {
                 guard let label = $0 as? UILabel else {
@@ -292,8 +303,10 @@ public class CompactCalendar: UIView {
                 }
                 label.font = font
             }
+
         case .datesView:
             datesViewFont = font
+
         default:
             return
         }
