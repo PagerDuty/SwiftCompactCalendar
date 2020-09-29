@@ -229,6 +229,7 @@ public class CompactCalendar: UIView {
             previousPageButton.backgroundColor = color
 
         case .daysOfTheWeekBar:
+            daysOfWeekStackView.backgroundColor = color
             contentView.backgroundColor = color
 
         case .datesView:
