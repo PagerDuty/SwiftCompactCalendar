@@ -1,3 +1,9 @@
+## ⚠️ ARCHIVED REPOSITORY
+
+**This repository is no longer actively maintained and has been archived.** We are no longer accepting issues, pull requests, or providing support for this project. The code remains available for reference and forking, but no future updates will be made.
+
+---
+
 ## Compact Calendar
 
 Compact Calendar is a CocoaPod developed in Swift with a customizable View that displays a Calendar two weeks at a time. 
